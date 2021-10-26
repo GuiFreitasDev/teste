@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(127, 150, 255);
+    }
+
+    .contain {
+        width: 50%;
+        margin: 100px auto;
+        text-align: center;
+        background-color: aliceblue;
+        border: 3px solid rgb(88, 84, 84, 0.8);
+        border-radius: 20px;
+        padding: 50px 0px;
+    }
+    img {
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div class="contain">
+        <h1 id="title">aksdjf hlakdjhf alkjfh</h1>
+        <p id="text">lakjsdfh laksfhl akdhflaj shflakjhds flahdflahdl akjsda</p>
+        <img id="turno" src="/aula1/img/manha.png" width="30%" alt="dia">
+    </div>
+
+<script>
+    var data = new Date();
+    var hora = data.getHours();
+    var title = document.getElementById("title");
+    var text = document.getElementById("text");
+    var turno = document.getElementById("turno");
+    title.innerHTML="Vai dar certo";
+    hora = 19;
+    
+    if (hora < 12) {
+        var periodo = "da manhã";
+        turno.src="/aula1/img/manha.png"
+    } else if (hora < 18) {
+        periodo = "da tarde";
+        turno.src="/aula1/img/tarde.jpg"
+    } else {
+        periodo = "da noite";
+        turno.src="/aula1/img/noite.jpg"
+    }
+
+    text.innerHTML=`Já deu certo! São ${hora} Horas ${periodo}`;
+
+</script>
+
+</body>
+</html>
