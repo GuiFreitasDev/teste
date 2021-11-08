@@ -1,60 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript</title>
+    <link rel="stylesheet" href="estilo.css" />
 </head>
 
-<style>
-    body {
-        background-color: rgb(127, 150, 255);
-    }
-
-    .contain {
-        width: 50%;
-        margin: 100px auto;
-        text-align: center;
-        background-color: aliceblue;
-        border: 3px solid rgb(88, 84, 84, 0.8);
-        border-radius: 20px;
-        padding: 50px 0px;
-    }
-    img {
-        border-radius: 50%;
-    }
-</style>
-
 <body>
-    <div class="contain">
-        <h1 id="title">aksdjf hlakdjhf alkjfh</h1>
-        <p id="text">lakjsdfh laksfhl akdhflaj shflakjhds flahdflahdl akjsda</p>
-        <img id="turno" src="img/manha.png" width="30%" alt="dia">
-    </div>
+    <header>
+        <h1>Treinando Javascript</h1>
+    </header>
 
-<script>
-    var data = new Date();
-    var hora = data.getHours();
-    var title = document.getElementById("title");
-    var text = document.getElementById("text");
-    var turno = document.getElementById("turno");
-    title.innerHTML="Vai dar certo";
+    <section>
+        <div id="caixa1">
+            <form>
+                <fieldset>
+                    <legend>Taboada</legend>
+                    <label for="num">De qual número você que a taboada:<br></label>
+                    <input type="number" name="num" id="num"><br>
+                    <label for="sel">Qual a operação da taboada:<br></label>
+                    <input type="radio" name="sel" id="soma" checked> Soma 
+                    <input type="radio" name="sel" id="subi"> Subitração
+                    <input type="radio" name="sel" id="multi"> Multiplicação
+                    <input type="radio" name="sel" id="divi"> Divisão <br>
+                    <input type="button" value="Resultado" onclick="calcular()">
+                    <div id="result">
+                        Aguardando...
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div id="caixa2">
+        </div>
+    </section>
 
-    if (hora < 12) {
-        var periodo = "da manhã";
-        turno.src="img/manha.png"
-    } else if (hora < 18) {
-        periodo = "da tarde";
-        turno.src="img/tarde.jpg"
-    } else {
-        periodo = "da noite";
-        turno.src="img/noite.jpg"
-    }
+    <footer>
+        Por <a href="#" target="_blank" rel="noopener noreferrer">GuiFreitasDev</a>
+    </footer>
 
-    text.innerHTML=`Já deu certo! São ${hora} Horas ${periodo}`;
-
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
